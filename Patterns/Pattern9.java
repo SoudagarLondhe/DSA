@@ -102,3 +102,24 @@ public class Pattern9
 //     }
 //     System.out.println();
 // }
+
+
+// -------------------------------------
+
+// Pattern for N = 4
+// 4444
+// 333
+// 22
+// 1
+
+
+
+
+// for(int i=1;i<=N;i++)
+// {
+//     for(int j=1;j<=(N-i+1);j++)
+//     {
+//         System.out.print(N-i+1);
+//     }
+//     System.out.println();
+// }
