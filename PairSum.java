@@ -35,8 +35,8 @@ Since there doesn't exist any pair with sum equal to 12 for the first query, we 
 For the second query, we have 2 pairs in total that sum up to 10. They are, (2, 8) and (5, 5).
 
 
-
-
+---------------------------
+More optimised using HashMap TC : 0(N)
 ----------------------------
 
 public class Solution {  
