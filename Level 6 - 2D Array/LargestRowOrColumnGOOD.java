@@ -38,6 +38,9 @@ column 0 31
 
 --------------------------------------
 
+// As question says row has more priority also from the many row the FIFO row has most proprity
+// that's why calculating the row sum and updating it and then doing the col sum checking
+
 
 public class Solution {
 
@@ -48,41 +51,38 @@ public class Solution {
             System.out.println("row 0 " + Integer.MIN_VALUE);
             return;
         }
-		String str = "row";
+		String str="";
 		int max=Integer.MIN_VALUE;
 		int sum;
 		int index=0;
 
-		int[] rowSums = new int[mat.length];
-		for(int j=0;j<mat[0].length;j++)
+		int[] colSums = new int[mat[0].length];
+		for(int i=0;i<mat.length;i++)
 		{
 			sum=0;
-			for(int i=0;i<mat.length;i++)
+			for(int j=0;j<mat[0].length;j++)
 			{
 				sum=sum+mat[i][j];
-				rowSums[i]=rowSums[i]+mat[i][j];
+				colSums[j]=colSums[j]+mat[i][j];
 			}
 			if(sum > max)
 			{
 				max=sum;
-				index = j;
-				str="column";
+				index = i;
+				str="row";
 			}
 		}
 
-		for(int k=0;k<rowSums.length;k++)
+		for(int k=0;k<colSums.length;k++)
 		{
-			if(rowSums[k] > max)
+			if(colSums[k] > max)
 			{
-				max=rowSums[k];
-				str="row";
+				max=colSums[k];
+				str="column";
 				index=k;
 			}
 		}
 
 		System.out.println(str+" "+index+" "+max);
-
-
 	}
-
 }
