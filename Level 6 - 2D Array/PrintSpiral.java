@@ -40,7 +40,10 @@ Sample Output 2:
 10 20 30 
 
 
+------------------------------------
 
+with less variables : 
+//attached scrrenshot 
 
 ------------------------------------
 More readability =>
