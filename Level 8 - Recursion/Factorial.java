@@ -20,7 +20,6 @@ class Main {
         return n*fact(n-1);
     }
     public static void main(String[] args) {
-        // System.out.println("Try programiz.pro");
         System.out.println(fact(5));
     }
 }
