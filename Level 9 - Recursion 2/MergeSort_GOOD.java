@@ -106,6 +106,14 @@ public class Solution {
 }
 
 
+main =>
+  public static void main(String[] args) {
+        int[] input = takeInput();
+        Solution.mergeSort(input, 0, input.length - 1);
+        printArray(input);
+    }
+
+
 --------------------------------------------
 
 public class Solution {
