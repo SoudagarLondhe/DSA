@@ -10,7 +10,7 @@ You must sort the elements between 'l' and 'r'.
 Note:
 Change in the input array itself. So no need to return or print anything.
 Example:
-Input: ‘N’ = 7,
+Input: 'N' = 7,
 'ARR' = [2, 13, 4, 1, 3, 6, 28]
 
 Output: [1 2 3 4 6 13 28]
