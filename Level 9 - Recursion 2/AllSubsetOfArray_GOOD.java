@@ -22,7 +22,88 @@ Sample Output:
 15 20 12 
 
 -------------------------------------------------
+Handling directly from length = 1
 
+public class solution {
+
+	// Return a 2D array that contains all the subsets which sum to k
+	public static String[] findSubArrays(int[] input,int startIndex, int[][] subResultsArray)
+	{
+		if(startIndex == input.length-1)
+		{
+			String[] binaryString = {"0","1"};
+			subResultsArray[0]=new int[0];
+			subResultsArray[1]=new int[1];
+			subResultsArray[1][0]=input[startIndex];
+			return binaryString;
+		}
+
+		String[] returnedBinaryArray = findSubArrays(input,startIndex+1,subResultsArray);
+	
+		String[] updateBinaryArray = new String[returnedBinaryArray.length*2];
+		for(int i=0,j=0;i<returnedBinaryArray.length/2;i++,j++)
+		{
+			updateBinaryArray[i] = "0"+returnedBinaryArray[j];
+		}
+		for(int i=returnedBinaryArray.length/2,j=0;i<returnedBinaryArray.length;i++,j++)
+		{
+			updateBinaryArray[i] = "1"+returnedBinaryArray[j];
+		}
+
+		// Binary String array updated till here
+
+		for(int i=1;i<updateBinaryArray.length;i++)
+		{
+			int count = 0;
+			for(int j=0;j<updateBinaryArray[i].length();j++)
+			{
+				if(updateBinaryArray[i].charAt(j)=='1')
+				{
+					count++;
+				}
+			}
+
+			subResultsArray[i] = new int[count];
+			int k=0;
+			for(int j=0;j<updateBinaryArray[i].length();j++)
+			{
+				if(updateBinaryArray[i].charAt(j) == '1')
+				{
+					subResultsArray[i][k]=input[j+startIndex];
+					k++;
+				}
+			}
+		}
+
+		return updateBinaryArray;
+
+	}
+
+	public static int[][] subsets(int input[]) 
+	{
+		// Write your code here
+		int subResultLength = (int) Math.pow(2,input.length);
+		int[][] subResultsArray = new int[subResultLength][];
+		// String[] str = findSubArrays(input,0,subResultsArray);
+
+		System.out.println("SubArrays Result =>");
+		// for(int i=0;i<subResultsArray.length;i++)
+		// {
+		// 	for(int j=0;j<subResultsArray[i].length;j++)
+		// 	{
+		// 		System.out.print(subResultsArray[i][j]+" ");
+		// 	}
+		// 	System.out.println();
+		// }
+
+		return subResultsArray;
+
+	}
+}
+
+
+
+-------------------------------------------------
 
 public class solution {
 
