@@ -27,7 +27,7 @@ public class solution {
 		{
 			return 0;
 		}
-		return m+multiplyTwoIntegers(m,--n);
+		return m+multiplyTwoIntegers(m,n-1);
 	
 	}
 }
