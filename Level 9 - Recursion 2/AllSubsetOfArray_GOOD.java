@@ -12,7 +12,7 @@ Sample Input:
 3
 15 20 12
 Sample Output:
-[] (this just represents an empty array, don't worry about the square brackets)
+[] (this just represents an empty array, dont worry about the square brackets)
 12 
 20 
 20 12 
