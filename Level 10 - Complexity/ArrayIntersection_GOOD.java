@@ -41,6 +41,12 @@ Since, both input arrays have two '2's, the intersection of the arrays also have
 
 ---------------------------------------------------
 
+More optimized would be sorting only one array and using another apply binary search to that array 
+which was sorted, in this case also we will get same complexity i.e O(mlogm) + O(nlogn)
+But the best part is we will sort that array which is shorter in length, so that we can reduce the logm part, 
+so this is more optimised one.  
+---------------------------------------------------
+
 Complexity for this : 
 O(mlogm) + O(nlogn) +   m +     n 
 Sort        Sort     travel    travel 
