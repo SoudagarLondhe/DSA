@@ -41,6 +41,11 @@ Since, both input arrays have two '2's, the intersection of the arrays also have
 
 ---------------------------------------------------
 
+Complexity for this : 
+O(mlogm) + O(nlogn) +   m +     n 
+Sort        Sort     travel    travel 
+
+= O(mlogm) + O(nlogn)
 
 import java.util.*;
 public class Solution {
