@@ -41,6 +41,8 @@ Sample Output 2 :
 
 ---------------------------------------
 
+TC : O(n)
+
 public class Solution {
 
 	public static int arrayEquilibriumIndex(int[] arr){  
@@ -68,3 +70,9 @@ public class Solution {
 		return -1;
 	}
 }
+
+--------------------------
+One method is - for each index find leftsum and rightsum 
+And there are n  indexes, so it will go to O(n^2)
+
+-------------------------
